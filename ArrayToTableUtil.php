@@ -123,7 +123,7 @@ class ArrayToTableUtil
         $s = '';
         $s .= "\t" . '<tfoot>' . PHP_EOL;
         $s .= "\t\t";
-        $s .= $this->renderRow($footer);
+        $s .= $this->renderRow($footer, 'tfoot');
         $s .= "\t" . '</tfoot>' . PHP_EOL;
         return $s;
     }
@@ -134,7 +134,7 @@ class ArrayToTableUtil
         $s .= "\t" . '<tbody>' . PHP_EOL;
         foreach ($rows as $row) {
             $s .= "\t\t";
-            $s .= $this->renderRow($row);
+            $s .= $this->renderRow($row, 'tbody');
         }
         $s .= "\t" . '</tbody>' . PHP_EOL;
         return $s;
@@ -146,7 +146,7 @@ class ArrayToTableUtil
     }
 
 
-    protected function renderRow(array $row)
+    protected function renderRow(array $row, $containerElType)
     {
         $s = '';
         $s .= '<tr>';
