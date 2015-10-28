@@ -8,6 +8,7 @@ namespace ArrayToTable;
 class ArrayToTableUtil
 {
 
+    private static $cpt = 1;
 
     private $caption;
 
@@ -65,6 +66,10 @@ class ArrayToTableUtil
     {
 
         $s = '';
+
+        $name = (null !== $this->caption) ? $this->caption : 'Table_' . self::$cpt++;
+
+        $s .= $this->renderTopComment($name);
         $s .= $this->renderTopTag();
 
         if (null !== $this->caption) {
@@ -82,6 +87,7 @@ class ArrayToTableUtil
         }
 
         $s .= $this->renderBottomTag();
+        $s .= $this->renderBottomComment($name);
         return $s;
     }
 
@@ -90,50 +96,53 @@ class ArrayToTableUtil
     //------------------------------------------------------------------------------/
     protected function renderTopTag()
     {
-        return '<table>';
+        return '<table>' . PHP_EOL;
     }
 
     protected function renderCaption($caption)
     {
-        return '<caption>' . $caption . '</caption>';
+        return "\t" . '<caption>' . $caption . '</caption>' . PHP_EOL;
     }
 
     protected function renderHeader(array $headers)
     {
         $s = '';
-        $s .= '<thead>';
+        $s .= "\t" . '<thead>' . PHP_EOL;
+        $s .= "\t\t";
         $s .= '<tr>';
         foreach ($headers as $id => $label) {
             $s .= '<th>' . $label . '</th>';
         }
-        $s .= '</tr>';
-        $s .= '</thead>';
+        $s .= '</tr>' . PHP_EOL;
+        $s .= "\t" . '</thead>' . PHP_EOL;
         return $s;
     }
 
     protected function renderFooter(array $footer)
     {
         $s = '';
-        $s .= '<tfoot>';
+        $s .= "\t" . '<tfoot>' . PHP_EOL;
+        $s .= "\t\t";
         $s .= $this->renderRow($footer);
-        $s .= '</tfoot>';
+        $s .= "\t" . '</tfoot>' . PHP_EOL;
         return $s;
     }
 
     protected function renderBody(array $rows)
     {
         $s = '';
-        $s .= '<tbody>';
+        $s .= "\t" . '<tbody>' . PHP_EOL;
         foreach ($rows as $row) {
+            $s .= "\t\t";
             $s .= $this->renderRow($row);
         }
-        $s .= '</tbody>';
+        $s .= "\t" . '</tbody>' . PHP_EOL;
         return $s;
     }
 
     protected function renderBottomTag()
     {
-        return '</table>';
+        return '</table>' . PHP_EOL;
     }
 
 
@@ -144,7 +153,15 @@ class ArrayToTableUtil
         foreach ($row as $v) {
             $s .= '<td>' . $v . '</td>';
         }
-        $s .= '</tr>';
+        $s .= '</tr>' . PHP_EOL;
         return $s;
+    }
+    
+    protected function renderTopComment($name){
+        return '<!-- START - '. $name .' -->'. PHP_EOL;
+    }
+    
+    protected function renderBottomComment($name){
+        return '<!-- END - '. $name .' -->' . PHP_EOL;
     }
 }

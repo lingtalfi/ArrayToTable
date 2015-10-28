@@ -69,9 +69,41 @@ echo ArrayToTableUtil::create()
 ```
 
 
+The example above will display a nicely formatted output (notice the comments and the clean indentation in 
+the generated source code):
+
+
+```html
+<!-- START - My first table -->
+<table>
+	<caption id="bam">My first table</caption>
+	<thead>
+		<tr><th>First Name</th><th>Gender</th><th>Job</th></tr>
+	</thead>
+	<tfoot>
+		<tr><td>Bum</td><td>Bam</td><td>Bim</td></tr>
+	</tfoot>
+	<tbody>
+		<tr><td>pierre</td><td>male</td><td>developer</td></tr>
+		<tr><td>alice</td><td>female</td><td>designer</td></tr>
+		<tr><td>kobe</td><td>male</td><td>basketball player</td></tr>
+		<tr><td>christine</td><td>female</td><td>marketing assistant</td></tr>
+	</tbody>
+</table>
+<!-- END - My first table -->
+```
+
+
+
+
+
 
 History Log
 ------------------
+    
+- 1.1.0 -- 2015-10-28
+
+    - improve generated html code formatting, add html comments at the top and bottom of the generated table
     
 - 1.0.0 -- 2015-10-28
 
