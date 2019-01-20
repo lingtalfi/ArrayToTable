@@ -192,7 +192,7 @@ echo StylizedArrayToTableUtil::create()
 
 The code above, when executed by a browser, would give the following image:
 
-[![stylized-Array-To-Table-example.png](https://i.postimg.cc/J7bvNmgw/stylized-Array-To-Table-example.png)](https://postimg.cc/rzwfc6Mg)
+[![stylized-Array-To-Table-example.png](http://lingtalfi.com/img/universe/ArrayToTable/stylized-Array-To-Table-example.png)](http://lingtalfi.com/img/universe/ArrayToTable/stylized-Array-To-Table-example.png)
 
 
 
