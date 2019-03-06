@@ -1,6 +1,6 @@
 <?php
 
-namespace ArrayToTable;
+namespace Ling\ArrayToTable;
 
 /*
  * LingTalfi 2015-10-28

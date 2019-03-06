@@ -1,11 +1,11 @@
 <?php
 
-namespace ArrayToTable;
+namespace Ling\ArrayToTable;
 
 /*
  * LingTalfi 2015-10-28
  */
-use Bat\StringTool;
+use Ling\Bat\StringTool;
 
 class StylizedArrayToTableUtil extends ArrayToTableUtil
 {

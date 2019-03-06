@@ -19,7 +19,7 @@ Install
 
 Using the [uni tool](https://github.com/lingtalfi/universe-naive-importer)
 ```bash
-uni import ArrayToTable
+uni import Ling/ArrayToTable
 ```
 
 
@@ -61,7 +61,7 @@ To create the simplest table possible, we can use the ArrayToTableUtil class.
 ```php
 <?php
 
-use ArrayToTable\ArrayToTableUtil;
+use Ling\ArrayToTable\ArrayToTableUtil;
 
 require_once "bigbang.php";
 
@@ -121,7 +121,7 @@ Here is an example.
 ```php
 <?php
 
-use ArrayToTable\StylizedArrayToTableUtil;
+use Ling\ArrayToTable\StylizedArrayToTableUtil;
 
 require_once "bigbang.php";
 
