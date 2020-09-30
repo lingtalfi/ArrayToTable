@@ -133,11 +133,11 @@ require_once "bigbang.php";
         .myTable, .myTable th, .myTable td {
             border: 1px solid #aaa;
             border-collapse: collapse;
-            padding: 2px;
+            padding: 3px;
         }
 
         .myTable .success {
-            background-color: green;
+            background-color: Blue;
         }
 
         .myTable .failure {
