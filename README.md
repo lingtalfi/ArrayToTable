@@ -202,7 +202,11 @@ The code above, when executed by a browser, would give the following image:
 
 History Log
 ------------------
-    
+
+- 1.2.1 -- 2020-12-04
+
+    - Add lpi-deps.byml file
+
 - 1.2.0 -- 2015-10-28 15:42
 
     - Added StylizedArrayToTableUtil
