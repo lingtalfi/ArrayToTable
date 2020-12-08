@@ -1,8 +1,14 @@
 1.0.0: 
-    - Ling:Bat:1.288
+    - Ling:Bat:1.292
 
 1.1.0: 
-    - Ling:Bat:1.288
+    - Ling:Bat:1.292
 
 1.2.0: 
-    - Ling:Bat:1.288
+    - Ling:Bat:1.292
+
+1.2.1: 
+    - Ling:Bat:1.292
+
+1.2.2: 
+    - Ling:Bat:1.292
